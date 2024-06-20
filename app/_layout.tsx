@@ -7,8 +7,8 @@ export default function RootLayout() {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="register" />
       <Stack.Screen name="index" />
+      <Stack.Screen name="register" />
       <Stack.Screen name="login" />
     </Stack>
   );
