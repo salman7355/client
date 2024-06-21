@@ -117,7 +117,7 @@ const register = () => {
         <Text style={[styles.terms, styles.agree]}>Terms of Service</Text>
       </View>
       <View style={styles.btn}>
-        <CustomButton text="Sign Up" route="" />
+        <CustomButton text="Sign Up" route="questionnaire" />
       </View>
     </SafeAreaView>
   );

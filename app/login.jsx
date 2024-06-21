@@ -61,7 +61,7 @@ const login = () => {
         <Text style={styles.passForgettxt}>Forgot Password?</Text>
       </View>
       <View style={styles.btn}>
-        <CustomButton text="Login" route={""} />
+        <CustomButton text="Login" route={"questionnaire"} />
         <View style={styles.register}>
           <Text style={styles.txt}>Don&apos;t have an account?</Text>
           <Link href="/register" asChild>
