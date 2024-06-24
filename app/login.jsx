@@ -8,13 +8,19 @@ import {
 } from "react-native";
 import React from "react";
 import { useState } from "react";
-import CheckBox from "react-native-check-box";
+import Checkbox from 'expo-checkbox';
 import CustomButton from "@/components/CustomButton";
 import { Link } from "expo-router";
 
 const login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [remember, setRemember] = useState(false);
+
+  const handleRemember = () => {
+    setRemember(!remember);
+  };
+
   return (
     <SafeAreaView styles={styles.container}>
       <View style={styles.imgContainer}>
@@ -22,10 +28,12 @@ const login = () => {
           style={styles.img}
           source={require("../assets/images/logoo.png")}
         />
-        <Text style={styles.loginTxt}>Log in to your Account</Text>
-        <Text style={styles.grtTxt}>
-          Glad to see you again, craving something ?
-        </Text>
+        <View style={{gap: 5, alignItems: 'center'}}>
+          <Text style={styles.loginTxt}>Log in to your Account</Text>
+          <Text style={styles.grtTxt}>
+            Glad to see you again, craving something ?
+          </Text>
+        </View>
       </View>
       <View style={styles.inputContainer}>
         <View style={styles.edit}>
@@ -49,12 +57,11 @@ const login = () => {
       </View>
       <View style={styles.forgetpass}>
         <View style={styles.remember}>
-          <CheckBox
+          <Checkbox
+            value={remember}
             style={styles.check}
-            checkBoxColor="#d4d9de"
-            onClick={() => {
-              console.log("checked");
-            }}
+            color="#d4d9de"
+            onValueChange={handleRemember}
           />
           <Text>Remember me</Text>
         </View>
@@ -81,6 +88,7 @@ const styles = StyleSheet.create({
   },
 
   imgContainer: {
+    width: '100%',
     paddingTop: 93,
     alignItems: "center",
   },
@@ -142,7 +150,9 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   btn: {
+    width: '100%',
     alignSelf: "center",
+    paddingHorizontal: 20,
   },
   registerTxt: {
     fontSize: 12,
