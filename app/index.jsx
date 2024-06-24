@@ -1,94 +1,66 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import {Image, StyleSheet, Text, View, ImageBackground} from "react-native";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
-import CustomButton from "@/components/CustomButton";
-import { Link } from "expo-router";
 import { useFonts } from "expo-font";
+import CustomButton from "@/components/CustomButton";
 
-const index = () => {
+const Welcome = () => {
   const [fontLoaded] = useFonts({
-    "Montserrat-Bold": require("../assets/fonts/Montserrat-Bold.ttf"),
+    "Montserrat-Bold": require("@/assets/fonts/Montserrat-Bold.ttf"),
   });
+
+  const image = require("@/assets/images/gettingStarted.png");
 
   if (!fontLoaded) {
     return null; // You can show a loader here if needed
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.imgContainer}>
-        <Image
-          style={styles.img}
-          source={require("../assets/images/gettingStarted.png")}
-        />
-      </View>
-      <View style={styles.txtContainer}>
-        <View>
-          <Image source={require("../assets/images/landinghead.png")} />
-        </View>
-        <Text style={[styles.txtColor, styles.subHeader]}>
-          Are you a craver ?
-        </Text>
-        <View style={styles.txt}>
-          <Text style={styles.txtColor}>Yummie, Your Magical Food Genie,</Text>
-          <Text style={styles.txtColor}>Ready to Serve Up Tasty Treats!</Text>
-          <Text style={styles.txtColor}>
-            Let AI Work Its Flavorful Magic and Serve You Perfect
-            Recommendations
+    <View style={styles.container}>
+      <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+        <View style={styles.textContainer}>
+          <View>
+            <Image source={require("@/assets/images/landinghead.png")} />
+          </View>
+          <Text style={[styles.txtColor, styles.subHeader]}>
+            Are you a craver ?
           </Text>
+          <View style={{width: '90%', fontWight: 'bold'}}>
+            <Text style={styles.txtColor}>
+              Yummie, Your Magical Food Genie, Ready to Serve Up Tasty Treats!
+              Let AI Work Its Flavorful Magic and Serve You Perfect
+              Recommendations
+            </Text>
+          </View>
         </View>
-      </View>
-      <View style={styles.btn}>
         <CustomButton text={"Continue"} route="login" />
-      </View>
-    </SafeAreaView>
+      </ImageBackground>
+    </View>
   );
 };
 
-export default index;
+export default Welcome;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // position: "relative",
   },
-  imgContainer: {
-    width: "100%",
-    height: "100%",
-  },
-  img: {
-    width: "100%",
-    height: "100%",
-    resizeMode: "cover",
-  },
-  txtContainer: {
-    position: "absolute",
-    bottom: 80,
-    marginBottom: 38,
-    paddingHorizontal: 27,
-    flex: 1,
+  textContainer: {
     gap: 20,
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    paddingBottom: 50,
+    paddingRight: 20,
+    paddingLeft: 20,
+    gap: 40
   },
   txtColor: {
     color: "#FFF",
-    fontSize: 12,
-  },
-  txtheader: {
-    fontSize: 12,
-    fontWeight: "500",
-    height: 63,
+    fontSize: 14,
   },
   subHeader: {
     fontFamily: "Montserrat-Bold",
     fontSize: 22,
-  },
-  txt: {
-    width: 277,
-    height: 63,
-  },
-  btn: {
-    position: "absolute",
-    bottom: 30,
-    alignSelf: "center",
   },
 });

@@ -17,7 +17,7 @@ export default CustomButton;
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 19,
-    width: 336,
+    width: '100%',
     borderRadius: 40,
     backgroundColor: "#ee6732",
     height: 56,
