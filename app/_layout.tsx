@@ -7,10 +7,10 @@ export default function RootLayout() {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="questionnaire" />
-      <Stack.Screen name="index" />
-      <Stack.Screen name="register" />
-      <Stack.Screen name="login" />
+        <Stack.Screen name="home" />
+        <Stack.Screen name="index" />
+        <Stack.Screen name="register" />
+        <Stack.Screen name="login" />
     </Stack>
   );
 }
