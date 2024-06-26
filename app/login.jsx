@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import React from "react";
 import { useState } from "react";
-import Checkbox from 'expo-checkbox';
+import Checkbox from "expo-checkbox";
 import CustomButton from "@/components/CustomButton";
 import { Link } from "expo-router";
 
@@ -28,7 +28,7 @@ const login = () => {
           style={styles.img}
           source={require("../assets/images/logoo.png")}
         />
-        <View style={{gap: 5, alignItems: 'center'}}>
+        <View style={{ gap: 5, alignItems: "center" }}>
           <Text style={styles.loginTxt}>Log in to your Account</Text>
           <Text style={styles.grtTxt}>
             Glad to see you again, craving something ?
@@ -68,7 +68,7 @@ const login = () => {
         <Text style={styles.passForgettxt}>Forgot Password?</Text>
       </View>
       <View style={styles.btn}>
-        <CustomButton text="Login" route={"home"} />
+        <CustomButton text="Login" route={"profile"} />
         <View style={styles.register}>
           <Text style={styles.txt}>Don&apos;t have an account?</Text>
           <Link href="/register" asChild>
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   },
 
   imgContainer: {
-    width: '100%',
+    width: "100%",
     paddingTop: 93,
     alignItems: "center",
   },
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   btn: {
-    width: '100%',
+    width: "100%",
     alignSelf: "center",
     paddingHorizontal: 20,
   },

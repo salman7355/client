@@ -4,7 +4,7 @@ import { Link } from "expo-router";
 
 const CustomButton = ({ text, route }) => {
   return (
-    <Link href={`/${route}`} asChild>
+    <Link href={`${route}`} asChild>
       <TouchableOpacity style={styles.container}>
         <Text style={styles.txt}>{text}</Text>
       </TouchableOpacity>
@@ -17,7 +17,7 @@ export default CustomButton;
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 19,
-    width: '100%',
+    width: "100%",
     borderRadius: 40,
     backgroundColor: "#ee6732",
     height: 56,
