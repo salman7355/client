@@ -50,7 +50,6 @@ const RestaurantCard = ({ restaurant, toAdd }) => {
         </View>
         <View
           style={{
-            justifyContent: "space-around",
             alignItems: "center",
             justifyContent: "flex-end",
           }}
