@@ -25,7 +25,7 @@ const login = () => {
 
   const handleLogin = async () => {
     try {
-      let response = axios.post("http://192.168.1.20:3000/login", {
+      let response = await axios.post("http://192.168.1.20:3000/login", {
         email: email,
         password: password,
       });
@@ -85,7 +85,7 @@ const login = () => {
         <CustomButton text="Login" route={"home"} onPress={handleLogin} />
         <View style={styles.register}>
           <Text style={styles.txt}>Don&apos;t have an account?</Text>
-          <Link href="/app/restaurant" asChild>
+          <Link href="/register" asChild>
             <Text style={styles.registerTxt}>Sign Up</Text>
           </Link>
         </View>
