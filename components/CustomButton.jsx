@@ -4,9 +4,9 @@ import { Link } from "expo-router";
 
 const CustomButton = ({ text, route, onPress }) => {
   return (
-        <TouchableOpacity style={styles.container} onPress={onPress}>
-          <Text style={styles.txt}>{text}</Text>
-        </TouchableOpacity>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
+      <Text style={styles.txt}>{text}</Text>
+    </TouchableOpacity>
   );
 };
 

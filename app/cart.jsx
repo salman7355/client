@@ -1,10 +1,15 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { FlatList } from "react-native";
 import RestaurantCard from "../components/RestaurantCard";
 import CustomButton from "@/components/CustomButton";
+import { router } from "expo-router";
 
 const cart = () => {
+  const handleCheckout = () => {
+    router.push("/successful");
+  };
+
   const restaurants = [
     {
       id: 1,
@@ -94,7 +99,7 @@ const cart = () => {
           bottom: 20,
         }}
       >
-        <CustomButton text="Checkout" route={"home"} />
+        <CustomButton text="Checkout" onPress={handleCheckout} />
       </View>
     </View>
   );

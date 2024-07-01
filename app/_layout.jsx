@@ -39,6 +39,7 @@ export default function RootLayout() {
           headerShadowVisible: false,
         }}
       />
+      <Stack.Screen name="successful" />
     </Stack>
   );
 }
