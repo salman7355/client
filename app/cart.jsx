@@ -1,14 +1,10 @@
-// app/restaurant/[id].js
-import { FlatList, SafeAreaView, Text, View } from "react-native";
-import { useLocalSearchParams } from "expo-router";
-import RestaurantDetailsHeader from "./components/Header";
-import SuggestedDish from "../../components/SuggestedDish";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import RestaurantCard from "../../components/RestaurantCard";
+import { FlatList } from "react-native";
+import RestaurantCard from "../components/RestaurantCard";
+import CustomButton from "@/components/CustomButton";
 
-export default function RestaurantDetails() {
-  const { id } = useLocalSearchParams();
-
+const cart = () => {
   const restaurants = [
     {
       id: 1,
@@ -58,74 +54,57 @@ export default function RestaurantDetails() {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos dolorum ducimus eius eveniet in inventore itaque iure",
     },
-  ];
-
-  const dishes = [
     {
-      id: 1,
-      title: "Burger",
+      id: 14,
+      title: "Burger King",
       img: "https://picsum.photos/200",
-      restaurant: "Burger King",
-    },
-    {
-      id: 2,
-      title: "Pizza",
-      img: "https://picsum.photos/200",
-      restaurant: "Pizza Hut",
-    },
-    {
-      id: 3,
-      title: "Sushi",
-      img: "https://picsum.photos/200",
-      restaurant: "Sushi Bar",
-    },
-    {
-      id: 4,
-      title: "Pasta",
-      img: "https://picsum.photos/200",
-      restaurant: "Pasta Bar",
+      rating: 4.5,
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos dolorum ducimus eius eveniet in inventore itaque iure",
     },
   ];
 
   return (
-    <SafeAreaView style={{ gap: 20, flex: 1 }}>
-      <RestaurantDetailsHeader />
-      <View style={{ paddingHorizontal: 20 }}>
-        <View style={{ gap: 10 }}>
-          <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-            Food you may like
-          </Text>
-          <View style={{ flexDirection: "row", gap: 10 }}>
-            {dishes.map((dish) => (
-              <SuggestedDish key={dish.id} dish={dish} />
-            ))}
-          </View>
-        </View>
-      </View>
-
+    <View style={styles.container}>
       <View
         style={{
           gap: 10,
           paddingHorizontal: 20,
-          paddingBottom: 300,
+          marginBottom: 60,
         }}
       >
         <FlatList
           showsVerticalScrollIndicator={false}
           data={restaurants}
           renderItem={(item) => (
-            <RestaurantCard restaurant={item.item} toAdd={true} />
+            <RestaurantCard restaurant={item.item} toAdd={false} />
           )}
           keyExtractor={(item) => item.id}
           contentContainerStyle={{
             paddingVertical: 10,
           }}
         />
-
-        {/* {restaurants.map((restaurant) => (
-            <RestaurantCard key={restaurant.id} restaurant={restaurant} />
-          ))} */}
       </View>
-    </SafeAreaView>
+      <View
+        style={{
+          width: "100%",
+          alignSelf: "center",
+          paddingHorizontal: 20,
+          position: "absolute",
+          bottom: 20,
+        }}
+      >
+        <CustomButton text="Checkout" route={"home"} />
+      </View>
+    </View>
   );
-}
+};
+
+export default cart;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "white",
+  },
+});

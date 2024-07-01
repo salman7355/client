@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 import React from "react";
 import { router } from "expo-router";
 
-const RestaurantCard = ({ restaurant }) => {
+const RestaurantCard = ({ restaurant, toAdd }) => {
   return (
     <View
       style={{
@@ -48,17 +48,26 @@ const RestaurantCard = ({ restaurant }) => {
             </Text>
           </View>
         </View>
-        <View style={{ justifyContent: "space-around", alignItems: "center" }}>
-          <Image
+        <View
+          style={{
+            justifyContent: "space-around",
+            alignItems: "center",
+            justifyContent: "flex-end",
+          }}
+        >
+          {/* <Image
             style={{ width: 20, height: 20, objectFit: "contain" }}
             source={require("../assets/images/heart.png")}
-          />
-          <TouchableOpacity style={styles.button}>
-            <View style={styles.plusIconContainer}>
-              <View style={styles.horizontalLine} />
-              <View style={styles.verticalLine} />
-            </View>
-          </TouchableOpacity>
+          /> */}
+
+          {toAdd && (
+            <TouchableOpacity style={styles.button}>
+              <View style={styles.plusIconContainer}>
+                <View style={styles.horizontalLine} />
+                <View style={styles.verticalLine} />
+              </View>
+            </TouchableOpacity>
+          )}
         </View>
       </Pressable>
     </View>

@@ -1,6 +1,7 @@
 import {
   FlatList,
   Image,
+  Pressable,
   SafeAreaView,
   ScrollView,
   Text,
@@ -9,6 +10,8 @@ import {
 import React from "react";
 import SuggestedDish from "../components/SuggestedDish";
 import RestaurantCard from "../components/RestaurantCard";
+import { Feather } from "@expo/vector-icons";
+import { Link, router } from "expo-router";
 
 const dishes = [
   {
@@ -106,14 +109,30 @@ const Home = () => {
           </Text>
         </View>
         <View style={{ display: "flex", flexDirection: "row", gap: 7 }}>
-          <Image
-            style={{ width: 30, height: 30, objectFit: "contain" }}
-            source={require("../assets/images/heart.png")}
+          <Feather
+            name="shopping-cart"
+            size={30}
+            color="#767676"
+            onPress={() => {
+              router.push("/cart");
+            }}
           />
-          <Image
-            style={{ width: 30, height: 30, objectFit: "contain" }}
-            source={require("../assets/images/profile.png")}
-          />
+          <Pressable>
+            <Image
+              style={{ width: 30, height: 30, objectFit: "contain" }}
+              source={require("../assets/images/heart.png")}
+            />
+          </Pressable>
+          <Pressable
+            onPress={() => {
+              router.push("/profile");
+            }}
+          >
+            <Image
+              style={{ width: 30, height: 30, objectFit: "contain" }}
+              source={require("../assets/images/profile.png")}
+            />
+          </Pressable>
         </View>
       </View>
 
@@ -146,7 +165,9 @@ const Home = () => {
           ListHeaderComponentStyle={{ paddingBottom: 10 }}
           showsVerticalScrollIndicator={false}
           data={restaurants}
-          renderItem={({ item }) => <RestaurantCard restaurant={item} />}
+          renderItem={({ item }) => (
+            <RestaurantCard restaurant={item} toAdd={false} />
+          )}
           keyExtractor={(item) => item.id}
           contentContainerStyle={{
             paddingVertical: 10,
