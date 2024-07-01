@@ -2,13 +2,11 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { Link } from "expo-router";
 
-const CustomButton = ({ text, route }) => {
+const CustomButton = ({ text, route, onPress }) => {
   return (
-    <Link href={`${route}`} asChild>
-      <TouchableOpacity style={styles.container}>
-        <Text style={styles.txt}>{text}</Text>
-      </TouchableOpacity>
-    </Link>
+        <TouchableOpacity style={styles.container} onPress={onPress}>
+          <Text style={styles.txt}>{text}</Text>
+        </TouchableOpacity>
   );
 };
 

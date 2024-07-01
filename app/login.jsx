@@ -10,9 +10,11 @@ import React from "react";
 import { useState } from "react";
 import Checkbox from "expo-checkbox";
 import CustomButton from "@/components/CustomButton";
-import { Link } from "expo-router";
+import { Link , useRouter} from "expo-router";
+import axios from "axios";
 
 const login = () => {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
@@ -20,6 +22,18 @@ const login = () => {
   const handleRemember = () => {
     setRemember(!remember);
   };
+
+  const handleLogin = async () => {
+    try {
+      let response = axios.post("http://192.168.1.20:3000/login", {
+        email: email,
+        password: password,
+      });
+      router.push('/home')
+    } catch {
+      conssole.log("Error")
+    }
+  }
 
   return (
     <SafeAreaView styles={styles.container}>
@@ -68,7 +82,7 @@ const login = () => {
         <Text style={styles.passForgettxt}>Forgot Password?</Text>
       </View>
       <View style={styles.btn}>
-        <CustomButton text="Login" route={"home"} />
+        <CustomButton text="Login" route={"home"} onPress={handleLogin} />
         <View style={styles.register}>
           <Text style={styles.txt}>Don&apos;t have an account?</Text>
           <Link href="/app/restaurant" asChild>

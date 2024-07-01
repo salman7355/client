@@ -2,17 +2,24 @@ import {Image, StyleSheet, Text, View, ImageBackground} from "react-native";
 import React from "react";
 import { useFonts } from "expo-font";
 import CustomButton from "@/components/CustomButton";
+import {useRouter} from "expo-router";
 
 const Welcome = () => {
   const [fontLoaded] = useFonts({
     "Montserrat-Bold": require("@/assets/fonts/Montserrat-Bold.ttf"),
   });
 
+  const router = useRouter()
+
   const image = require("@/assets/images/gettingStarted.png");
 
   if (!fontLoaded) {
     return null; // You can show a loader here if needed
   }
+
+  const handleRoute = () => {
+    router.push('/login')
+  };
 
   return (
     <View style={styles.container}>
@@ -32,7 +39,7 @@ const Welcome = () => {
             </Text>
           </View>
         </View>
-        <CustomButton text={"Continue"} route="login" />
+        <CustomButton text={"Continue"} onPress={handleRoute}/>
       </ImageBackground>
     </View>
   );
