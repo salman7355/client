@@ -1,42 +1,50 @@
-import {View, Text, Image, TouchableOpacity} from "react-native";
+import {View, Text, Image, TouchableOpacity, Pressable} from "react-native";
 import {StyleSheet} from "react-native";
 import React from "react";
+import {router} from "expo-router";
 
 const RestaurantCard = ({restaurant}) => {
     return (
-        <View style={{ height: '100%', flexDirection: 'row', padding: 10, borderRadius: 15, borderStyle: 'solid', borderWidth: 1, borderColor: 'black', justifyContent: 'space-between'}}>
-            <View style={{flexDirection: 'row', gap: 10}}>
-                <Image
-                    style={{height: '100%', width: 100, objectFit: 'cover', borderRadius: 15}}
-                    source={{
-                        uri: `${restaurant.img}`,
-                    }}
-                />
-                <View style={{width: '50%', justifyContent: 'space-evenly'}}>
-                    <Text style={{fontWeight: 'bold', fontSize: 18}}>
-                        {restaurant.title}
-                    </Text>
-                    <Text>
-                        Rating: {restaurant.rating}
-                    </Text>
-                    <Text>
-                        {restaurant.description.length > 50 ? restaurant.description.slice(0, 50) + "..." : restaurant.description}
-                    </Text>
-                </View>
-            </View>
-            <View style={{justifyContent: 'space-around', alignItems: 'center'}}>
-                <Image
-                    style={{width: 20, height: 20, objectFit: 'contain'}}
-                    source={require("../assets/images/heart.png")}
-                />
-                <TouchableOpacity style={styles.button}>
-                    <View style={styles.plusIconContainer}>
-                        <View style={styles.horizontalLine} />
-                        <View style={styles.verticalLine} />
+        <View
+            style={{ height: '100%', padding: 10, borderRadius: 15, borderStyle: 'solid', borderWidth: 1, borderColor: 'black'}}
+        >
+            <Pressable
+                onPress={() => router.push(`/restaurant/${restaurant.id}`)}
+                style={{flexDirection: 'row', height: '100%', justifyContent: 'space-between'}}
+            >
+                <View style={{flexDirection: 'row', gap: 10}}>
+                    <Image
+                        style={{height: '100%', width: 100, objectFit: 'cover', borderRadius: 15}}
+                        source={{
+                            uri: `${restaurant.img}`,
+                        }}
+                    />
+                    <View style={{width: '50%', justifyContent: 'space-evenly'}}>
+                        <Text style={{fontWeight: 'bold', fontSize: 18}}>
+                            {restaurant.title}
+                        </Text>
+                        <Text>
+                            Rating: {restaurant.rating}
+                        </Text>
+                        <Text>
+                            {restaurant.description.length > 50 ? restaurant.description.slice(0, 50) + "..." : restaurant.description}
+                        </Text>
                     </View>
-                </TouchableOpacity>
+                </View>
+                <View style={{justifyContent: 'space-around', alignItems: 'center'}}>
+                    <Image
+                        style={{width: 20, height: 20, objectFit: 'contain'}}
+                        source={require("../assets/images/heart.png")}
+                    />
+                    <TouchableOpacity style={styles.button}>
+                        <View style={styles.plusIconContainer}>
+                            <View style={styles.horizontalLine} />
+                            <View style={styles.verticalLine} />
+                        </View>
+                    </TouchableOpacity>
 
-            </View>
+                </View>
+            </Pressable>
         </View>
     )
 }

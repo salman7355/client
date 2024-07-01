@@ -11,7 +11,8 @@ export default function RootLayout() {
       <Stack.Screen name="register" />
       <Stack.Screen name="login" />
       <Stack.Screen name="home" />
-      <Stack.Screen
+        <Stack.Screen name="restaurant/[id]" options={{ title: "Restaurant Details" }} />
+        <Stack.Screen
         name="profile"
         options={{
           headerShown: true,

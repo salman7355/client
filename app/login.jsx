@@ -68,10 +68,10 @@ const login = () => {
         <Text style={styles.passForgettxt}>Forgot Password?</Text>
       </View>
       <View style={styles.btn}>
-        <CustomButton text="Login" route={"profile"} />
+        <CustomButton text="Login" route={"home"} />
         <View style={styles.register}>
           <Text style={styles.txt}>Don&apos;t have an account?</Text>
-          <Link href="/register" asChild>
+          <Link href="/app/restaurant" asChild>
             <Text style={styles.registerTxt}>Sign Up</Text>
           </Link>
         </View>
