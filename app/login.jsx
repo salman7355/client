@@ -25,10 +25,10 @@ const login = () => {
 
   const handleLogin = async () => {
     try {
-      let response = await axios.post("http://192.168.1.20:3000/login", {
-        email: email,
-        password: password,
-      });
+      // let response = await axios.post("http://192.168.1.20:3000/login", {
+      //   email: email,
+      //   password: password,
+      // });
       router.push('/home')
     } catch {
       conssole.log("Error")

@@ -17,25 +17,25 @@ const dishes = [
   {
     id: 1,
     title: "Burger",
-    img: "https://picsum.photos/200",
+    img: "https://www.foodandwine.com/thmb/DI29Houjc_ccAtFKly0BbVsusHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg",
     restaurant: "Burger King",
   },
   {
     id: 2,
     title: "Pizza",
-    img: "https://picsum.photos/200",
+    img: "https://www.moulinex-me.com/medias/?context=bWFzdGVyfHJvb3R8MTQzNTExfGltYWdlL2pwZWd8YUdObEwyaG1aQzh4TlRrMk9EWXlOVGM0TmpreE1DNXFjR2N8MmYwYzQ4YTg0MTgzNmVjYTZkMWZkZWZmMDdlMWFlMjRhOGIxMTQ2MTZkNDk4ZDU3ZjlkNDk2MzMzNDA5OWY3OA",
     restaurant: "Pizza Hut",
   },
   {
     id: 3,
     title: "Sushi",
-    img: "https://picsum.photos/200",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTd1lb7IgwAbBWcld8j0WM6yYmkjHQ-gctGg&s",
     restaurant: "Sushi Bar",
   },
   {
     id: 4,
     title: "Pasta",
-    img: "https://picsum.photos/200",
+    img: "https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg",
     restaurant: "Pasta Bar",
   },
 ];
@@ -44,26 +44,26 @@ const restaurants = [
   {
     id: 1,
     title: "Burger King",
-    img: "https://picsum.photos/200",
-    rating: 4.5,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ--1MJsy7_DWpEDHBVdc8L7Vn-neqF-M_MyA&s",
+    rating: 3.4,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos dolorum ducimus eius eveniet in inventore itaque iure",
+      "Burger King is an American multinational chain of hamburger fast food restaurants. Headquartered in Miami-Dade County, Florida, the company was founded in 1953 as Insta-Burger King, a Jacksonville, Florida–based restaurant chain.",
   },
   {
     id: 3,
-    title: "Burger King",
-    img: "https://picsum.photos/200",
-    rating: 4.5,
+    title: "Pizza Hut",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmqA5PzX8RH4rzMK5rDU6lyQXjBznCA5G-jw&s",
+    rating: 5.0,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos dolorum ducimus eius eveniet in inventore itaque iure",
+        "Pizza Hut is an American restaurant chain and international franchise founded in 1958 in Wichita, Kansas by Dan and Frank Carney. It provides Italian-American cuisine, including pizza, pasta, side dishes and desserts.",
   },
   {
     id: 2,
-    title: "Burger King",
-    img: "https://picsum.photos/200",
+    title: "McDonald's",
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/McDonald%27s_square_2020.svg/800px-McDonald%27s_square_2020.svg.png",
     rating: 4.5,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos dolorum ducimus eius eveniet in inventore itaque iure",
+        "McDonald's Corporation is an American fast food company, founded in 1940 as a restaurant operated by Richard and Maurice McDonald, in San Bernardino, California, United States.",
   },
   {
     id: 41,

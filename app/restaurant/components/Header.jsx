@@ -27,7 +27,7 @@ export default function RestaurantDetailsHeader() {
                         borderRadius: 8
                     }}
                     source={{
-                        uri: 'https://picsum.photos/200'
+                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ--1MJsy7_DWpEDHBVdc8L7Vn-neqF-M_MyA&s'
                     }}
                 />
                 <View
@@ -41,16 +41,16 @@ export default function RestaurantDetailsHeader() {
                             fontWeight: 'bold',
                             fontSize: 20
                         }}
-                    >Prego
+                    >Burger King
                     </Text>
                     <Text
                         style={{
                             color: 'gray'
                         }}
-                    >Sandwiches, Grills, Chicken
+                    >Sandwiches, Fast Food
                     </Text>
                     <Text>
-                        Rating: 2.5
+                        Rating: 3.4
                     </Text>
                 </View>
             </View>

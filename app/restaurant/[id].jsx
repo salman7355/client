@@ -12,27 +12,27 @@ export default function RestaurantDetails() {
   const restaurants = [
     {
       id: 1,
-      title: "Burger King",
-      img: "https://picsum.photos/200",
+      title: "Cheese Burger",
+      img: "https://s23209.pcdn.co/wp-content/uploads/2022/07/220602_DD_The-Best-Ever-Cheeseburger_267.jpg",
       rating: 4.5,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos dolorum ducimus eius eveniet in inventore itaque iure",
+      'This cheeseburger recipe is a classic and will become a family favorite. The best cheeseburger recipe is made with a juicy beef patty, a slice of cheese, and all the fixings on a toasted bun. This is the perfect cheeseburger recipe!',
     },
     {
       id: 3,
-      title: "Burger King",
-      img: "https://picsum.photos/200",
-      rating: 4.5,
+      title: "Mushroom Burger",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFnPwnmWfGuVXblPZHvkl_CFBU46SdPyrz-g&s",
+      rating: 3.2,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos dolorum ducimus eius eveniet in inventore itaque iure",
+       "This mushroom burger is a delicious vegetarian burger recipe that is full of flavor. It is made with a juicy mushroom patty, a slice of cheese, and all the fixings on a toasted bun. This is the perfect vegetarian burger recipe!",
     },
     {
       id: 2,
-      title: "Burger King",
-      img: "https://picsum.photos/200",
-      rating: 4.5,
+      title: "Chicken Burger",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Mu1bhhIVSuRNlSfKPn3viOur2gQRTCJvsw&s",
+      rating: 2.5,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos dolorum ducimus eius eveniet in inventore itaque iure",
+        "This chicken burger recipe is a classic and will become a family favorite. The best chicken burger recipe is made with a juicy chicken patty, a slice of cheese, and all the fixings on a toasted bun. This is the perfect chicken burger recipe!",
     },
     {
       id: 41,
@@ -63,27 +63,27 @@ export default function RestaurantDetails() {
   const dishes = [
     {
       id: 1,
-      title: "Burger",
-      img: "https://picsum.photos/200",
-      restaurant: "Burger King",
+      title: "Chicken Wings",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWMRTQV6R1tFZTuvuFIQbGu01gqEzt43iy2g&s",
+      // restaurant: "Burger King",
     },
     {
       id: 2,
-      title: "Pizza",
-      img: "https://picsum.photos/200",
-      restaurant: "Pizza Hut",
+      title: "Loaded Fries",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_rJJJ7jnVYbiii3Gnqk3edvO08iqinDaUsg&s",
+      // restaurant: "Pizza Hut",
     },
     {
       id: 3,
-      title: "Sushi",
-      img: "https://picsum.photos/200",
-      restaurant: "Sushi Bar",
+      title: "Bacon  Beef",
+      img: "https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/beef-caramelised-bacon-burger-7fa59d72.jpg",
+      // restaurant: "Sushi Bar",
     },
     {
       id: 4,
-      title: "Pasta",
-      img: "https://picsum.photos/200",
-      restaurant: "Pasta Bar",
+      title: "Classic Burger",
+      img: "https://www.inspiredtaste.net/wp-content/uploads/2023/06/Easy-Hamburger-Recipe-Video.jpg",
+      // restaurant: "Pasta Bar",
     },
   ];
 
