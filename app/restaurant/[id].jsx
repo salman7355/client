@@ -16,7 +16,8 @@ export default function RestaurantDetails() {
       img: "https://s23209.pcdn.co/wp-content/uploads/2022/07/220602_DD_The-Best-Ever-Cheeseburger_267.jpg",
       rating: 4.5,
       description:
-      'This cheeseburger recipe is a classic and will become a family favorite. The best cheeseburger recipe is made with a juicy beef patty, a slice of cheese, and all the fixings on a toasted bun. This is the perfect cheeseburger recipe!',
+        "This cheeseburger recipe is a classic and will become a family favorite. The best cheeseburger recipe is made with a juicy beef patty, a slice of cheese, and all the fixings on a toasted bun. This is the perfect cheeseburger recipe!",
+      price: 8.99,
     },
     {
       id: 3,
@@ -24,7 +25,8 @@ export default function RestaurantDetails() {
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFnPwnmWfGuVXblPZHvkl_CFBU46SdPyrz-g&s",
       rating: 3.2,
       description:
-       "This mushroom burger is a delicious vegetarian burger recipe that is full of flavor. It is made with a juicy mushroom patty, a slice of cheese, and all the fixings on a toasted bun. This is the perfect vegetarian burger recipe!",
+        "This mushroom burger is a delicious vegetarian burger recipe that is full of flavor. It is made with a juicy mushroom patty, a slice of cheese, and all the fixings on a toasted bun. This is the perfect vegetarian burger recipe!",
+      price: 9.49,
     },
     {
       id: 2,
@@ -33,6 +35,7 @@ export default function RestaurantDetails() {
       rating: 2.5,
       description:
         "This chicken burger recipe is a classic and will become a family favorite. The best chicken burger recipe is made with a juicy chicken patty, a slice of cheese, and all the fixings on a toasted bun. This is the perfect chicken burger recipe!",
+      price: 7.99,
     },
     {
       id: 41,
@@ -41,6 +44,7 @@ export default function RestaurantDetails() {
       rating: 4.5,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos dolorum ducimus eius eveniet in inventore itaque iure",
+      price: 6.99,
     },
     {
       id: 11,
@@ -49,6 +53,7 @@ export default function RestaurantDetails() {
       rating: 4.5,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos dolorum ducimus eius eveniet in inventore itaque iure",
+      price: 6.99,
     },
     {
       id: 12,
@@ -57,6 +62,7 @@ export default function RestaurantDetails() {
       rating: 4.5,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dignissimos dolorum ducimus eius eveniet in inventore itaque iure",
+      price: 6.99,
     },
   ];
 

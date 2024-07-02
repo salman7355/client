@@ -12,6 +12,7 @@ import SuggestedDish from "../components/SuggestedDish";
 import RestaurantCard from "../components/RestaurantCard";
 import { Feather } from "@expo/vector-icons";
 import { Link, router } from "expo-router";
+import { useSelector } from "react-redux";
 
 const dishes = [
   {
@@ -55,7 +56,7 @@ const restaurants = [
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmqA5PzX8RH4rzMK5rDU6lyQXjBznCA5G-jw&s",
     rating: 5.0,
     description:
-        "Pizza Hut is an American restaurant chain and international franchise founded in 1958 in Wichita, Kansas by Dan and Frank Carney. It provides Italian-American cuisine, including pizza, pasta, side dishes and desserts.",
+      "Pizza Hut is an American restaurant chain and international franchise founded in 1958 in Wichita, Kansas by Dan and Frank Carney. It provides Italian-American cuisine, including pizza, pasta, side dishes and desserts.",
   },
   {
     id: 2,
@@ -63,7 +64,7 @@ const restaurants = [
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/McDonald%27s_square_2020.svg/800px-McDonald%27s_square_2020.svg.png",
     rating: 4.5,
     description:
-        "McDonald's Corporation is an American fast food company, founded in 1940 as a restaurant operated by Richard and Maurice McDonald, in San Bernardino, California, United States.",
+      "McDonald's Corporation is an American fast food company, founded in 1940 as a restaurant operated by Richard and Maurice McDonald, in San Bernardino, California, United States.",
   },
   {
     id: 41,
@@ -92,6 +93,7 @@ const restaurants = [
 ];
 
 const Home = () => {
+  const { items } = useSelector((state) => state.cart);
   return (
     <SafeAreaView style={{ gap: 20, flex: 1 }}>
       <View
@@ -109,14 +111,41 @@ const Home = () => {
           </Text>
         </View>
         <View style={{ display: "flex", flexDirection: "row", gap: 7 }}>
-          <Feather
-            name="shopping-cart"
-            size={30}
-            color="#767676"
-            onPress={() => {
-              router.push("/cart");
-            }}
-          />
+          <View style={{ position: "relative" }}>
+            <Feather
+              name="shopping-cart"
+              size={30}
+              color="#767676"
+              onPress={() => {
+                router.push("/cart");
+              }}
+            />
+            <View
+              style={{
+                position: "absolute",
+                backgroundColor: "orange",
+                width: 17,
+                height: 17,
+                right: -5,
+                borderRadius: 10,
+                top: -3,
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Text
+                style={{
+                  fontWeight: "bold",
+                  textAlign: "center",
+                  width: "100%",
+                  height: "100%",
+                  lineHeight: 18,
+                }}
+              >
+                {items.length}
+              </Text>
+            </View>
+          </View>
           <Pressable>
             <Image
               style={{ width: 30, height: 30, objectFit: "contain" }}

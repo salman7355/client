@@ -10,21 +10,6 @@ export default function RootLayout() {
           headerShown: false,
         }}
       >
-        <Stack.Screen
-          name="cart"
-          options={{
-            headerShown: true,
-            title: "My Cart",
-            headerTitleAlign: "center",
-            headerStyle: {
-              backgroundColor: "transparent", // Make the background transparent
-            },
-            headerShadowVisible: false,
-            headerTitleStyle: {
-              fontSize: 24,
-            },
-          }}
-        />
         <Stack.Screen name="index" />
         <Stack.Screen name="register" />
         <Stack.Screen name="login" />
@@ -45,7 +30,21 @@ export default function RootLayout() {
             headerShadowVisible: false,
           }}
         />
-
+        <Stack.Screen
+          name="cart"
+          options={{
+            headerShown: true,
+            title: "My Cart",
+            headerTitleAlign: "center",
+            headerStyle: {
+              backgroundColor: "transparent", // Make the background transparent
+            },
+            headerShadowVisible: false,
+            headerTitleStyle: {
+              fontSize: 24,
+            },
+          }}
+        />
         <Stack.Screen name="successful" />
       </Stack>
     </Provider>

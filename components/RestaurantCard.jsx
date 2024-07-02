@@ -2,8 +2,20 @@ import { View, Text, Image, TouchableOpacity, Pressable } from "react-native";
 import { StyleSheet } from "react-native";
 import React from "react";
 import { router } from "expo-router";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem } from "../store/features/cart/cartSlice";
+import { MaterialIcons } from "@expo/vector-icons";
 
 const RestaurantCard = ({ restaurant, toAdd }) => {
+  const dispatch = useDispatch();
+  const { items } = useSelector((state) => state.cart);
+
+  const isInCart = items.some((item) => item.id === restaurant.id);
+
+  const addToCart = () => {
+    dispatch(addItem(restaurant));
+  };
+
   return (
     <View
       style={{
@@ -60,11 +72,17 @@ const RestaurantCard = ({ restaurant, toAdd }) => {
           /> */}
 
           {toAdd && (
-            <TouchableOpacity style={styles.button}>
-              <View style={styles.plusIconContainer}>
-                <View style={styles.horizontalLine} />
-                <View style={styles.verticalLine} />
-              </View>
+            <TouchableOpacity style={styles.button} onPress={addToCart}>
+              {isInCart ? (
+                <View>
+                  <MaterialIcons name="done" size={24} color="white" />
+                </View>
+              ) : (
+                <View style={styles.plusIconContainer}>
+                  <View style={styles.horizontalLine} />
+                  <View style={styles.verticalLine} />
+                </View>
+              )}
             </TouchableOpacity>
           )}
         </View>
