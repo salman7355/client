@@ -5,9 +5,12 @@ import RestaurantDetailsHeader from "./components/Header";
 import SuggestedDish from "../../components/SuggestedDish";
 import React from "react";
 import RestaurantCard from "../../components/RestaurantCard";
+import { useRoute } from "@react-navigation/native";
 
 export default function RestaurantDetails() {
-  const { id } = useLocalSearchParams();
+  const { id, restaurant } = useLocalSearchParams();
+
+  // console.log(restaurant);
 
   const restaurants = [
     {
@@ -95,7 +98,7 @@ export default function RestaurantDetails() {
 
   return (
     <SafeAreaView style={{ gap: 20, flex: 1 }}>
-      <RestaurantDetailsHeader />
+      <RestaurantDetailsHeader restaurant={restaurant} />
       <View style={{ paddingHorizontal: 20 }}>
         <View style={{ gap: 10 }}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>

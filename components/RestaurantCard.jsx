@@ -29,7 +29,14 @@ const RestaurantCard = ({ restaurant, toAdd }) => {
       }}
     >
       <Pressable
-        onPress={() => router.push(`/restaurant/${restaurant.id}`)}
+        onPress={() =>
+          router.push({
+            pathname: `/restaurant/${restaurant.id}`,
+            params: {
+              restaurant: JSON.stringify(restaurant), // Serialize the restaurant object
+            },
+          })
+        }
         style={{
           flexDirection: "row",
           height: "100%",
