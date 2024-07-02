@@ -16,28 +16,40 @@ import { useSelector } from "react-redux";
 
 const dishes = [
   {
-    id: 1,
-    title: "Burger",
+    id: 51,
+    title: "Double Cheese Bacon Burger",
     img: "https://www.foodandwine.com/thmb/DI29Houjc_ccAtFKly0BbVsusHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg",
     restaurant: "Burger King",
+    price: 8.99,
+    description:
+      "A hearty burger featuring two beef patties, double cheese slices, crispy bacon, fresh lettuce, tomatoes, onions, and our special sauce on a sesame seed bun.",
   },
   {
-    id: 2,
-    title: "Pizza",
+    id: 52,
+    title: "Supreme Meat Lover's Pizza",
     img: "https://www.moulinex-me.com/medias/?context=bWFzdGVyfHJvb3R8MTQzNTExfGltYWdlL2pwZWd8YUdObEwyaG1aQzh4TlRrMk9EWXlOVGM0TmpreE1DNXFjR2N8MmYwYzQ4YTg0MTgzNmVjYTZkMWZkZWZmMDdlMWFlMjRhOGIxMTQ2MTZkNDk4ZDU3ZjlkNDk2MzMzNDA5OWY3OA",
     restaurant: "Pizza Hut",
+    price: 15.99,
+    description:
+      "A meaty feast with pepperoni, Italian sausage, ham, ground beef, bacon, and extra mozzarella cheese on a thin crust, baked to perfection.",
   },
   {
-    id: 3,
-    title: "Sushi",
+    id: 53,
+    title: "Dragon Roll Sushi",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTd1lb7IgwAbBWcld8j0WM6yYmkjHQ-gctGg&s",
     restaurant: "Sushi Bar",
+    price: 12.99,
+    description:
+      "Exquisite sushi rolls filled with tempura shrimp, avocado, cucumber, and topped with spicy tuna, eel sauce, and tobiko. Served with pickled ginger and wasabi.",
   },
   {
-    id: 4,
-    title: "Pasta",
+    id: 54,
+    title: "Creamy Truffle Mushroom Pasta",
     img: "https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg",
     restaurant: "Pasta Bar",
+    price: 14.99,
+    description:
+      "Savory linguine pasta tossed in a creamy truffle-infused mushroom sauce, garnished with Parmesan cheese and fresh herbs.",
   },
 ];
 
